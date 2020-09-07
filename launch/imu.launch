@@ -1,0 +1,9 @@
+<launch>
+  <node name="imu_read_node" pkg="miiboo_imu"  type="imu_read" output="screen">
+    <param name="com_port"     value="/dev/ttyUSB2"/>
+    <param name="imu_frame_id" value="imu_link"/>
+  </node>
+
+  <node name="state_detect" pkg="state_detect"  type="state_detect"/>
+
+</launch>
